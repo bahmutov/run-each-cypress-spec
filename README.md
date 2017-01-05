@@ -2,26 +2,29 @@
 
 > Small script to run each Cypress spec file one by one
 
-[![NPM][npm-icon] ][npm-url]
+## Problem
 
-[![Build status][ci-image] ][ci-url]
-[![semantic-release][semantic-image] ][semantic-url]
-[![js-standard-style][standard-image]][standard-url]
+If you separate [Cypress](https://www.cypress.io/)
+E2E tests into multiple spec files, you soon end up with lots of files.
+This script allows you to run all of them one after another from the
+command line.
+
+## Related
+
+* [Cypress tips and tricks](https://glebbahmutov.com/blog/cypress-tips-and-tricks/)
 
 ### Small print
 
 Author: Gleb Bahmutov &lt;gleb.bahmutov@gmail.com&gt; &copy; 2017
 
-
 * [@bahmutov](https://twitter.com/bahmutov)
 * [glebbahmutov.com](http://glebbahmutov.com)
 * [blog](http://glebbahmutov.com/blog)
 
-
 License: MIT - do anything with the code, but don't blame me if it does not work.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/run-each-cypress-spec/issues) on Github
+[open issue](https://github.com/bahmutov/send-test-info/issues) on Github
 
 ## MIT License
 
@@ -47,12 +50,3 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
-
-[npm-icon]: https://nodei.co/npm/run-each-cypress-spec.svg?downloads=true
-[npm-url]: https://npmjs.org/package/run-each-cypress-spec
-[ci-image]: https://travis-ci.org/bahmutov/run-each-cypress-spec.svg?branch=master
-[ci-url]: https://travis-ci.org/bahmutov/run-each-cypress-spec
-[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
-[semantic-url]: https://github.com/semantic-release/semantic-release
-[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
-[standard-url]: http://standardjs.com/
