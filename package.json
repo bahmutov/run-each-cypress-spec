@@ -1,0 +1,36 @@
+{
+  "name": "run-each-cypress-spec",
+  "description": "Small script to run each Cypress spec file one by one",
+  "version": "1.0.0",
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "bugs": "https://github.com/bahmutov/run-each-cypress-spec/issues",
+  "files": [
+    "run-specs.sh"
+  ],
+  "bin": {
+    "run-specs": "run-specs.sh"
+  },
+  "homepage": "https://github.com/bahmutov/run-each-cypress-spec#readme",
+  "keywords": [
+    "bash",
+    "cypress",
+    "run",
+    "script",
+    "shell"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bahmutov/run-each-cypress-spec.git"
+  },
+  "scripts": {
+    "issues": "git-issues",
+    "size": "t=\"$(npm pack .)\"; wc -c \"${t}\"; tar tvf \"${t}\"; rm \"${t}\";"
+  },
+  "devDependencies": {
+    "git-issues": "1.3.1"
+  }
+}
