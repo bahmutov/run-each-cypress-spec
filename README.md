@@ -9,6 +9,21 @@ E2E tests into multiple spec files, you soon end up with lots of files.
 This script allows you to run all of them one after another from the
 command line.
 
+This little shell script finds all `cypress/integration/*-spec.js` files
+and runs them one by one using `cypress run` command.
+
+```sh
+npm install -g run-each-cypress-spec
+run-specs
+```
+
+If you need environment variables (like urls, passwords), you can easily
+inject them using [as-a](https://github.com/bahmutov/as-a)
+
+```sh
+as-a cy run-specs
+```
+
 ## Related
 
 * [Cypress tips and tricks](https://glebbahmutov.com/blog/cypress-tips-and-tricks/)
