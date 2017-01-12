@@ -2,6 +2,11 @@
 
 > Small script to run each Cypress spec file one by one
 
+[![NPM][run-each-cypress-spec-icon] ][run-each-cypress-spec-url]
+
+[![Build status][run-each-cypress-spec-ci-image] ][run-each-cypress-spec-ci-url]
+[![semantic-release][semantic-image] ][semantic-url]
+
 ## Problem
 
 If you separate [Cypress](https://www.cypress.io/)
@@ -24,9 +29,18 @@ inject them using [as-a](https://github.com/bahmutov/as-a)
 as-a cy run-specs
 ```
 
+## Videos and screenshots
+
+To prevent Cypress from deleting videos from the first spec when starting
+the second spec, the videos and screenshots will be placed into
+subfolders. For example videos for spec `foo-spec.js` will be saved into
+the folder `cypress/videos/foo`.
+
 ## Related
 
 * [Cypress tips and tricks](https://glebbahmutov.com/blog/cypress-tips-and-tricks/)
+* [cypress-failed-log](https://github.com/bahmutov/cypress-failed-log) - Gets you
+  the Cypress test command log as JSON on failure
 
 ### Small print
 
@@ -65,3 +79,10 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+[run-each-cypress-spec-icon]: https://nodei.co/npm/run-each-cypress-spec.svg?downloads=true
+[run-each-cypress-spec-url]: https://npmjs.org/package/run-each-cypress-spec
+[run-each-cypress-spec-ci-image]: https://travis-ci.org/bahmutov/run-each-cypress-spec.svg?branch=master
+[run-each-cypress-spec-ci-url]: https://travis-ci.org/bahmutov/run-each-cypress-spec
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
