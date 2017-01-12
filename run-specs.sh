@@ -22,10 +22,16 @@ else
   tests=$(find cypress/integration -name '*-spec.js' | grep $1)
 fi
 
+justName="[^/]*-spec\.js$"
 for name in $tests
 do
-  echo "running $name"
-  echo "start $(date)"
-  time cypress run --spec $name || true
+  # name includes path, like cypress/integration/foo-spec.js
+  filename=${name##*/}
+  specname=${filename%.js}
+  echo "running spec file $name spec name $specname"
+  # echo "start $(date)"
+  time CYPRESS_videosFolder=cypress/videos/$specname \
+    CYPRESS_screenshotsFolder=cypress/screenshots/$specname \
+    cypress run --spec $name || true
   echo "finish $(date)"
 done
