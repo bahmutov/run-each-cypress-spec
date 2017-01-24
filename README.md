@@ -29,6 +29,8 @@ inject them using [as-a](https://github.com/bahmutov/as-a)
 as-a cy run-specs
 ```
 
+If a single test fails, the loop will exit with error right away.
+
 ## Videos and screenshots
 
 To prevent Cypress from deleting videos from the first spec when starting

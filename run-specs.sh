@@ -29,9 +29,8 @@ do
   filename=${name##*/}
   specname=${filename%.js}
   echo "running spec file $name spec name $specname"
-  # echo "start $(date)"
   time CYPRESS_videosFolder=cypress/videos/$specname \
     CYPRESS_screenshotsFolder=cypress/screenshots/$specname \
-    cypress run --spec $name || true
+    cypress run --spec $name
   echo "finish $(date)"
 done
