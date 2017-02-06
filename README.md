@@ -38,6 +38,19 @@ the second spec, the videos and screenshots will be placed into
 subfolders. For example videos for spec `foo-spec.js` will be saved into
 the folder `cypress/videos/foo`.
 
+## Old specs
+
+Sometimes, if your CI is not guaranteed to have a clean slate (I am looking
+at you, Jenkins!) the workspace might have "old" spec files that have not
+been properly deleted. You can clean the spec folder yourself by running
+the [git clean](https://git-scm.com/docs/git-clean) command.
+
+```sh
+$ git clean -f cypress
+```
+
+Deletes all non-tracked files in folder `cypress` and its subfolders.
+
 ## Related
 
 * [Cypress tips and tricks](https://glebbahmutov.com/blog/cypress-tips-and-tricks/)
