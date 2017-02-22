@@ -51,6 +51,11 @@ $ git clean -f cypress
 
 Deletes all non-tracked files in folder `cypress` and its subfolders.
 
+## Running tests twice
+
+Sometimes tests fail for unknown reason. You can run a test a second time
+automatically by setting `DOUBLE=1 npm run ...` environment variable.
+
 ## Related
 
 * [Cypress tips and tricks](https://glebbahmutov.com/blog/cypress-tips-and-tricks/)

@@ -28,9 +28,16 @@ do
   # name includes path, like cypress/integration/foo-spec.js
   filename=${name##*/}
   specname=${filename%.js}
-  echo "running spec file $name spec name $specname"
-  time CYPRESS_videosFolder=cypress/videos/$specname \
-    CYPRESS_screenshotsFolder=cypress/screenshots/$specname \
-    cypress run --spec $name
-  echo "finish $(date)"
+  videos=cypress/videos/$specname
+  images=cypress/screenshots/$specname
+
+  if [[ $DOUBLE ]]
+  then
+    echo "running twice spec file $name"
+    CYPRESS_videosFolder=$videos CYPRESS_screenshotsFolder=$images cypress run --spec $name || cypress run --spec $name
+  else
+    echo "running once spec file $name spec name $specname"
+    time CYPRESS_videosFolder=$videos CYPRESS_screenshotsFolder=$images cypress run --spec $name
+    echo "finish $(date)"
+  fi
 done
